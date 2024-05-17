@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Schopenhauer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #808080;
+        }
+
+        header {
+            background-color: #3b3b3b;
+            padding: 20px;
+            border-bottom: 3px solid #000000;
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        a.button {
+            display: block;
+            width: calc(100% - 40px);
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #303030;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        a.button:hover {
+            background-color: #000000;
+        }
+
+        .dropdown {
+            position: absolute;
+            display: none;
+            background-color: #303030;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 10px;
+            border-radius: 5px;
+            width: calc(100% - 40px);
+            max-width: 300px;
+        }
+
+        .dropdown a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            border-bottom: 1px solid #505050;
+        }
+
+        .dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown a:hover {
+            background-color: #000000;
+        }
+
+        .content-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px rgb(0, 0, 0);
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .page {
+            display: none;
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #3b3b3b;
+            padding: 10px 20px;
+            border-top: 3px solid #000000;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .c1 {
+            text-align: left;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+        }
+
+        .clickable-img {
+            display: block;
+            margin: 20px auto;
+            width: 60%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px rgb(0, 0, 0);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Schopenhauer</h1>
+        <div class="button-container">
+            <a href="javascript:void(0);" class="button" onclick="toggleDropdown()">Apri Menu</a>
+            <a href="javascript:void(0);" class="button" onclick="playAudio()">FE!N</a>
+            <div class="dropdown" id="dropdownMenu">
+                <a href="index.html">Home</a>
+                <a href="k.html">Kierkegaard</a>
+                <a href="s.html">Schopenhauer</a>
+                <a href="fonti.html">Fonti</a>
+            </div>
+        </div>
+    </header>
+
+    <audio id="myAudio" src="FE!N.mp3"></audio>
+
+    <div class="content-box">
+        <h1>Filosofia</h1>
+        <p class="c1">Arthur Schopenhauer, filosofo tedesco del XIX secolo, è noto per la sua visione unica e profondamente pessimista del mondo. Nato nel 1788 a Danzica, Schopenhauer ha sviluppato una filosofia radicale che ha influenzato profondamente il pensiero occidentale.
+
+        <br><br>1. Volontà e Rappresentazione: Schopenhauer ha introdotto il concetto fondamentale di "Volontà" come forza primaria e irrazionale che guida tutte le azioni e le aspirazioni umane. Ha anche parlato della "Rappresentazione", che è il modo in cui percepiamo il mondo esterno attraverso i nostri sensi.
+        
+        <br><br>2. Pessimismo: Schopenhauer è spesso associato al pessimismo per la sua visione del mondo come dominato dal dolore, dalla sofferenza e dal desiderio insaziabile. Ha sostenuto che la vita è intrinsecamente insoddisfacente e che il desiderio porta solo a un perpetuo stato di insoddisfazione.
+        
+        <br><br>3. Nega il Principio di Ragione: Schopenhauer ha criticato il Principio di Ragione, sostenendo che non spiega appieno la complessità dell'esistenza umana e che molte delle nostre azioni sono guidate dalla volontà irrazionale anziché dalla logica razionale.
+        
+        <br><br>4. L'importanza dell'Arte: Ha ritenuto che l'arte, in particolare la musica, fosse un mezzo per elevare temporaneamente l'individuo al di sopra della sfera della volontà e della sofferenza, consentendo momenti di trascendenza e contemplazione.
+        
+        <br><br>5. Etica e Compassione: Nonostante il suo pessimismo, Schopenhauer ha enfatizzato l'importanza della compassione e della gentilezza verso gli altri. Ha suggerito che comprendere la sofferenza altrui può portare a una maggiore compassione e a una migliore comprensione della condizione umana.
+        
+        <br><br>In sintesi, Schopenhauer ha offerto una visione filosofica unica e profondamente pessimista del mondo, centrata sulla nozione di Volontà come forza fondamentale dell'esistenza umana. La sua filosofia continua a essere studiata e influente, specialmente nei campi della filosofia, della psicologia e della letteratura.
+        <br><br></p>
+
+        <img src="j1.png" alt="Io ne ho viste cose che voi umani non potreste immaginarvi" class="clickable-img" onclick="changeImage(this)">
+    </div>
+
+
+    <br><br><br><br><br><br><br><br>
+
+    <footer class="footer">
+        <p>&copy; Sito realizzato da $BOLT alias Pietro Raffin</p>
+        <img src="carti.png" alt="Immagine" style="display: block; margin: 20px auto; width: 100px; height: 50px;">
+    </footer>
+
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("dropdownMenu");
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.button')) {
+                var dropdowns = document.getElementsByClassName("dropdown");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function changeImage(img) {
+            if (img.src.includes("j1.png")) {
+                img.src = "j2.png";
+            } else {
+                img.src = "j1.png";
+            }
+        }
+    </script>
+</body>
+</html>

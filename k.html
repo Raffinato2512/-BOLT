@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Kierkegaard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #808080;
+        }
+
+        header {
+            background-color: #3b3b3b;
+            padding: 20px;
+            border-bottom: 3px solid #000000;
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        a.button {
+            display: block;
+            width: calc(100% - 40px);
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #303030;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        a.button:hover {
+            background-color: #000000;
+        }
+
+        .dropdown {
+            position: absolute;
+            display: none;
+            background-color: #303030;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 10px;
+            border-radius: 5px;
+            width: calc(100% - 40px);
+            max-width: 300px;
+        }
+
+        .dropdown a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            border-bottom: 1px solid #505050;
+        }
+
+        .dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown a:hover {
+            background-color: #000000;
+        }
+
+        .content-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px rgb(0, 0, 0);
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 60%;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px rgb(0, 0, 0);
+            overflow: hidden;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #3b3b3b;
+            padding: 10px 20px;
+            border-top: 3px solid #000000;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .c1 {
+            text-align: left;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kierkegaard</h1>
+        <div class="button-container">
+            <a href="javascript:void(0);" class="button" onclick="toggleDropdown()">Apri Menu</a>
+            <a href="javascript:void(0);" class="button" onclick="playAudio()">FE!N</a>
+            <div class="dropdown" id="dropdownMenu">
+                <a href="index.html">Home</a>
+                <a href="k.html">Kierkegaard</a>
+                <a href="s.html">Schopenhauer</a>
+                <a href="fonti.html">Fonti</a>
+            </div>
+        </div>
+    </header>
+
+    <audio id="myAudio" src="FE!N.mp3"></audio>
+
+    <div class="content-box">
+        <h1>Filosofia</h1>
+        <p class="c1">Søren Kierkegaard è stato un filosofo danese del XIX secolo, considerato il padre dell'esistenzialismo cristiano. La sua filosofia è stata influente per la sua profonda analisi dell'individuo, della fede e dell'esistenza umana. Ecco un riassunto dei suoi principali concetti e contributi:
+            <br><br>1. Esistenzialismo: Kierkegaard è noto per aver introdotto il concetto di esistenzialismo, che si concentra sull'individuo, la sua libertà, la responsabilità e l'angoscia dell'esistenza umana. Ha enfatizzato l'importanza dell'esperienza soggettiva e dell'auto-riflessione.
+            <br><br>2. Fede e religione: Kierkegaard ha trattato approfonditamente il tema della fede e della religione, criticando l'approccio razionalistico alla fede e sottolineando l'importanza della scelta individuale e dell'impegno personale nella relazione con Dio.
+            <br><br>3. L'Angoscia: Ha introdotto il concetto di "angoscia" come parte integrante dell'esistenza umana. L'angoscia rappresenta l'ansia e l'incertezza che proviamo nel confrontarci con la nostra libertà e le nostre scelte.
+            <br><br>4. Il Soggetto Assoluto: Kierkegaard ha sostenuto l'importanza dell'individualità e della soggettività nell'affrontare le questioni esistenziali. Ha parlato del "soggetto assoluto" come la massima espressione della singolarità e della responsabilità individuali.
+            <br><br>5. La comunicazione indiretta: Ha utilizzato spesso pseudonimi e tecniche narrative complesse per esprimere i suoi concetti filosofici in modo indiretto, invitando i lettori a riflettere criticamente sulle proprie vite e credenze.
+            <br><br>In breve, Kierkegaard ha influenzato profondamente la filosofia moderna con la sua enfasi sulla soggettività, la fede, l'angoscia e l'importanza della scelta individuale nella vita umana. La sua opera continua a essere studiata e discussa sia nella filosofia che nella teologia.
+            <br><br>
+        </p>
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="s1.png" alt="Guerrieri, giochiamo a fare la guerra?">
+            </div>
+            <div class="mySlides">
+                <img src="s2.png" alt="Mi piace l'odore del napalm al mattino.">
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+
+    <footer class="footer">
+        <p>&copy; Sito realizzato da $BOLT alias Pietro Raffin</p>
+        <img src="carti.png" alt="Immagine" style="display: block; margin: 20px auto; width: 100px; height: 50px;">
+    </footer>
+
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("dropdownMenu");
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.button')) {
+                var dropdowns = document.getElementsByClassName("dropdown");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+    </script>
+</body>
+</html>
